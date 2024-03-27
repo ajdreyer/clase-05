@@ -1,0 +1,14 @@
+<!-- 
+    STATLESS COMPONENTS:
+    son plantillas que carecen de un estado propio.
+
+    STATEFULL COMPONENTS:
+    son componentes que manejan la data(estado de la información)
+
+
+-->
+<ul #myList class="list-group">
+    @for (usuario of usuarios; track $index) {
+        <li class="list-group-item">{{usuario.firstName}} {{usuario.lastName}} <button (click)="deleteUser.emit($index)" class="btn btn-danger">X</button></li>
+    }
+</ul>
